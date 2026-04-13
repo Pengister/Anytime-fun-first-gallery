@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inflatable Games Gallery</title>
 
+  <!-- Swiper CSS -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <style>
@@ -17,6 +19,10 @@
       --card-bg: #ffffff;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
@@ -25,7 +31,7 @@
     }
 
     .section {
-      padding: 4rem 2rem;
+      padding: 2rem 2rem 4rem;
       max-width: 120rem;
       margin: 0 auto;
     }
@@ -40,7 +46,6 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      align-items: stretch;
     }
 
     .card {
@@ -71,17 +76,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .swiper-button-next,
     .swiper-button-prev {
       color: #fff;
-      transform: scale(0.7);
-    }
-
-    /* FULL WIDTH LAST CARD */
-    .full-width {
-      grid-column: span 3;
+      transform: scale(0.75);
     }
 
     .call-btn {
@@ -90,7 +91,7 @@
       padding: 1.2rem 2.4rem;
       font-size: 1.6rem;
       background: var(--accent);
-      color: white;
+      color: #fff;
       text-decoration: none;
       border-radius: 999px;
       width: fit-content;
@@ -103,23 +104,16 @@
     }
 
     /* RESPONSIVE */
+
     @media (max-width: 1024px) {
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .full-width {
-        grid-column: span 2;
       }
     }
 
     @media (max-width: 600px) {
       .gallery-grid {
         grid-template-columns: 1fr;
-      }
-
-      .full-width {
-        grid-column: span 1;
       }
 
       .swiper {
@@ -216,13 +210,13 @@
   </div>
 </div>
 
-<!-- Mobile Video Game Trailer (FULL WIDTH FEATURE) -->
-<div class="card full-width">
+<!-- Mobile Video Game Trailer -->
+<div class="card">
   <div class="card-header">Mobile Video Game Trailer</div>
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://picsum.photos/1200/400?13"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/1200/400?14"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?13"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?14"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -237,6 +231,8 @@
 <a href="tel:+2348137910908" class="call-btn">📞 Call Now</a>
 
 </section>
+
+<!-- Swiper JS -->
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
