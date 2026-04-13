@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inflatable Games Gallery</title>
 
-  <!-- Swiper CSS -->
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <style>
@@ -42,6 +40,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      align-items: stretch;
     }
 
     .card {
@@ -76,8 +75,13 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-      color: white;
+      color: #fff;
       transform: scale(0.7);
+    }
+
+    /* FULL WIDTH LAST CARD */
+    .full-width {
+      grid-column: span 3;
     }
 
     .call-btn {
@@ -90,7 +94,7 @@
       text-decoration: none;
       border-radius: 999px;
       width: fit-content;
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s ease;
     }
 
     .call-btn:hover {
@@ -98,16 +102,24 @@
       transform: scale(1.05);
     }
 
-    /* RESPONSIVENESS */
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .full-width {
+        grid-column: span 2;
       }
     }
 
     @media (max-width: 600px) {
       .gallery-grid {
         grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: span 1;
       }
 
       .swiper {
@@ -133,7 +145,6 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?1"></div>
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?2"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?3"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -145,9 +156,8 @@
   <div class="card-header">Combos</div>
   <div class="swiper">
     <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?3"></div>
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?4"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?5"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?6"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -159,9 +169,8 @@
   <div class="card-header">Obstacles</div>
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?7"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?8"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?9"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?5"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?6"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -173,7 +182,32 @@
   <div class="card-header">Interactives</div>
   <div class="swiper">
     <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?7"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?8"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<!-- Specialty Games -->
+<div class="card">
+  <div class="card-header">Specialty Games</div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://picsum.photos/400/300?9"></div>
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?10"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<!-- Add-ons -->
+<div class="card">
+  <div class="card-header">Add-ons</div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?11"></div>
       <div class="swiper-slide"><img src="https://picsum.photos/400/300?12"></div>
     </div>
@@ -182,27 +216,13 @@
   </div>
 </div>
 
-<!-- Specialty -->
-<div class="card">
-  <div class="card-header">Specialty Games</div>
+<!-- Mobile Video Game Trailer (FULL WIDTH FEATURE) -->
+<div class="card full-width">
+  <div class="card-header">Mobile Video Game Trailer</div>
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?13"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?14"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?15"></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div>
-
-<!-- Mobile Video Trailer -->
-<div class="card">
-  <div class="card-header">Video Preview</div>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?16"></div>
-      <div class="swiper-slide"><img src="https://picsum.photos/400/300?17"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/1200/400?13"></div>
+      <div class="swiper-slide"><img src="https://picsum.photos/1200/400?14"></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -218,14 +238,10 @@
 
 </section>
 
-<!-- Swiper JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  const swipers = document.querySelectorAll('.swiper');
-
-  swipers.forEach((el) => {
+  document.querySelectorAll('.swiper').forEach((el) => {
     new Swiper(el, {
       loop: true,
       spaceBetween: 10,
